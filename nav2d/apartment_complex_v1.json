@@ -1,0 +1,294 @@
+{
+  "name": "apartment_complex_v1",
+  "map_bounds_world": {
+    "xmin": -13.200000000000001,
+    "xmax": 13.200000000000001,
+    "ymin": -11.200000000000001,
+    "ymax": 11.200000000000001
+  },
+  "grid": {
+    "rows": 54,
+    "cols": 64,
+    "cell_size_m": 0.4,
+    "origin_world_xy": [
+      -12.8,
+      -10.8
+    ],
+    "cell_center_formula": "x=origin_x+(c+0.5)*cell ; y=origin_y+(r+0.5)*cell"
+  },
+  "corridors_cells": {
+    "horizontal_spine": {
+      "r0": 30,
+      "r1": 34,
+      "c0": 5,
+      "c1": 58
+    },
+    "vertical_branch": {
+      "c0": 28,
+      "c1": 32,
+      "r0": 8,
+      "r1": 34
+    },
+    "width_m": 2.0,
+    "apartment_niches_off_spine": [
+      {
+        "col": 10,
+        "dir": "up",
+        "depth_cells": 7
+      },
+      {
+        "col": 16,
+        "dir": "down",
+        "depth_cells": 6
+      },
+      {
+        "col": 22,
+        "dir": "up",
+        "depth_cells": 6
+      },
+      {
+        "col": 52,
+        "dir": "up",
+        "depth_cells": 7
+      },
+      {
+        "col": 56,
+        "dir": "down",
+        "depth_cells": 6
+      }
+    ],
+    "apartment_niches_off_branch": [
+      {
+        "row": 14,
+        "dir": "left",
+        "depth_cells": 6
+      },
+      {
+        "row": 22,
+        "dir": "right",
+        "depth_cells": 6
+      }
+    ],
+    "curved_ring_around_lightwell": {
+      "center_cell": [
+        18,
+        44
+      ],
+      "radius_cells": 6,
+      "lightwell_block": {
+        "cr": 18,
+        "cc": 44,
+        "half": 3
+      },
+      "note": "two connected arcs (0-180 and 180-360) form a loop wrapping the well"
+    }
+  },
+  "dock_isolated": {
+    "room_cells": {
+      "r0": 44,
+      "r1": 51,
+      "c0": 6,
+      "c1": 14
+    },
+    "single_door_cell": [
+      43,
+      10
+    ],
+    "narrow_stub_cells": {
+      "r0": 27,
+      "r1": 43,
+      "c": 10
+    },
+    "dock_cell": [
+      48,
+      10
+    ],
+    "dock_world_xy": [
+      -8.600000000000001,
+      8.600000000000001
+    ],
+    "isolation": "walled technical room; ONE 1-cell door + narrow stub, off the resident routes"
+  },
+  "destinations": {
+    "0": {
+      "cell": [
+        24,
+        10
+      ],
+      "world_xy": [
+        -8.600000000000001,
+        -1.0
+      ],
+      "kind": "niche apartment door"
+    },
+    "1": {
+      "cell": [
+        39,
+        16
+      ],
+      "world_xy": [
+        -6.2,
+        5.0
+      ],
+      "kind": "niche apartment door"
+    },
+    "2": {
+      "cell": [
+        25,
+        22
+      ],
+      "world_xy": [
+        -3.8000000000000007,
+        -0.5999999999999996
+      ],
+      "kind": "niche apartment door"
+    },
+    "3": {
+      "cell": [
+        24,
+        52
+      ],
+      "world_xy": [
+        8.2,
+        -1.0
+      ],
+      "kind": "ring/arc apartment"
+    },
+    "4": {
+      "cell": [
+        39,
+        56
+      ],
+      "world_xy": [
+        9.8,
+        5.0
+      ],
+      "kind": "niche apartment door"
+    },
+    "5": {
+      "cell": [
+        14,
+        23
+      ],
+      "world_xy": [
+        -3.4000000000000004,
+        -5.0
+      ],
+      "kind": "niche apartment door"
+    },
+    "6": {
+      "cell": [
+        22,
+        37
+      ],
+      "world_xy": [
+        2.1999999999999993,
+        -1.8000000000000007
+      ],
+      "kind": "niche apartment door"
+    },
+    "7": {
+      "cell": [
+        12,
+        44
+      ],
+      "world_xy": [
+        5.0,
+        -5.800000000000001
+      ],
+      "kind": "niche apartment door"
+    }
+  },
+  "resident_patrols": [
+    {
+      "waypoints_cells": [
+        [
+          32,
+          8
+        ],
+        [
+          32,
+          26
+        ],
+        [
+          32,
+          8
+        ]
+      ],
+      "waypoints_world": [
+        [
+          -9.4,
+          2.1999999999999993
+        ],
+        [
+          -2.1999999999999993,
+          2.1999999999999993
+        ],
+        [
+          -9.4,
+          2.1999999999999993
+        ]
+      ]
+    },
+    {
+      "waypoints_cells": [
+        [
+          32,
+          56
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          32,
+          56
+        ]
+      ],
+      "waypoints_world": [
+        [
+          9.8,
+          2.1999999999999993
+        ],
+        [
+          1.8000000000000007,
+          2.1999999999999993
+        ],
+        [
+          9.8,
+          2.1999999999999993
+        ]
+      ]
+    },
+    {
+      "waypoints_cells": [
+        [
+          10,
+          30
+        ],
+        [
+          28,
+          30
+        ],
+        [
+          10,
+          30
+        ]
+      ],
+      "waypoints_world": [
+        [
+          -0.5999999999999996,
+          -6.6000000000000005
+        ],
+        [
+          -0.5999999999999996,
+          0.5999999999999996
+        ],
+        [
+          -0.5999999999999996,
+          -6.6000000000000005
+        ]
+      ]
+    }
+  ]
+}

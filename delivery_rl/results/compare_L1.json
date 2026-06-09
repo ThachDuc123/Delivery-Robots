@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "level": 1,
+    "timesteps": 100000,
+    "eval_episodes": 20,
+    "max_steps": 600,
+    "seed": 0,
+    "total_minutes": 52.6
+  },
+  "results": {
+    "ppo": {
+      "avg_reward": -64.53633674423199,
+      "avg_steps": 600.0,
+      "delivery_rate": 0.0,
+      "success_rate": 0.0,
+      "collisions_per_ep": 0.0,
+      "train_minutes": 3.17,
+      "timesteps": 100000
+    },
+    "sac": {
+      "avg_reward": -35.96341161678501,
+      "avg_steps": 582.6,
+      "delivery_rate": 0.1,
+      "success_rate": 0.0,
+      "collisions_per_ep": 0.05,
+      "train_minutes": 22.97,
+      "timesteps": 100000
+    },
+    "td3": {
+      "avg_reward": -45.25321484783116,
+      "avg_steps": 499.7,
+      "delivery_rate": 0.0,
+      "success_rate": 0.0,
+      "collisions_per_ep": 0.2,
+      "train_minutes": 25.87,
+      "timesteps": 100000
+    }
+  }
+}

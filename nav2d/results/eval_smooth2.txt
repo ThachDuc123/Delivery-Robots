@@ -1,0 +1,13 @@
+
+=== SET A — 1000-map distribution (70 lượt) ===
+Bộ lái               Tới đích Va chạm  e_y(m)  Đánh võng°   Bước
+Pure-Pursuit              99%      1%   0.016        1.14    158
+ms_guided_smooth          99%      1%   0.035        1.64    171
+ms_guided_smooth2         99%      1%   0.040        1.60    170
+
+=== SET B — map cũ (50 lượt) ===
+Bộ lái               Tới đích Va chạm  e_y(m)  Đánh võng°   Bước
+Pure-Pursuit              96%      4%   0.017        1.02    183
+ms_guided_smooth          96%      4%   0.036        1.95    198
+ms_guided_smooth2         96%      4%   0.042        2.01    191
+DONE

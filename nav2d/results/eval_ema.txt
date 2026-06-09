@@ -1,0 +1,15 @@
+
+=== SET A — 1000-map (60 lượt) ===
+Bộ lái                       Tới đích Va chạm  Đánh võng°   Bước
+Pure-Pursuit                      98%      2%        1.17    162
+RL smooth (no filter)             98%      2%        1.63    174
+RL + EMA α=0.6                    98%      2%        1.98    176
+RL + EMA α=0.8                    98%      2%        2.60    184
+
+=== SET B — map cũ (40 lượt) ===
+Bộ lái                       Tới đích Va chạm  Đánh võng°   Bước
+Pure-Pursuit                      95%      5%        0.92    184
+RL smooth (no filter)             95%      5%        1.76    198
+RL + EMA α=0.6                    95%      5%        2.08    203
+RL + EMA α=0.8                    95%      5%        2.34    208
+DONE

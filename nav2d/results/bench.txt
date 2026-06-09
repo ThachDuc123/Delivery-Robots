@@ -1,0 +1,38 @@
+Map             Ctrl              Giao  Về dock  Võng(°)   Bước   Giây
+------------------------------------------------------------------------
+apartment_a     Pure-pursuit  10/    10     True     2.52   1669  166.9
+apartment_a     RL v1         9/    10     True    39.61  19558 1955.8
+apartment_a     RL v2         8/    10     True    31.81  77632 7763.2
+------------------------------------------------------------------------
+apartment_b     Pure-pursuit  12/    12     True     2.96   1377  137.7
+apartment_b     RL v1         12/    12     True    46.60  32005 3200.5
+apartment_b     RL v2         10/    12     True    46.81  76781 7678.1
+------------------------------------------------------------------------
+apartment_c     Pure-pursuit  8/     8     True     2.76   1338  133.8
+apartment_c     RL v1         7/     8     True    41.49  31767 3176.7
+apartment_c     RL v2         8/     8     True    33.76  47933 4793.3
+------------------------------------------------------------------------
+test_c_curve    Pure-pursuit  3/     3     True    12.23  15544 1554.4
+test_c_curve    RL v1         1/     3     True    30.14  30410 3041.0
+test_c_curve    RL v2         3/     3     True    23.96   1053  105.3
+------------------------------------------------------------------------
+test_s_curve    Pure-pursuit  3/     3     True    11.98  15708 1570.8
+test_s_curve    RL v1         3/     3    False    46.24  15798 1579.8
+test_s_curve    RL v2         3/     3    False    26.80  16059 1605.9
+------------------------------------------------------------------------
+test_u_turn     Pure-pursuit  3/     3     True    11.95  15675 1567.5
+test_u_turn     RL v1         3/     3     True    36.53  16373 1637.3
+test_u_turn     RL v2         2/     3     True    34.09  16682 1668.2
+------------------------------------------------------------------------
+apartment_complexPure-pursuit  8/     8     True     2.98   1350  135.0
+apartment_complexRL v1         5/     8     True    35.34  46997 4699.7
+apartment_complexRL v2         2/     8    False    41.73 10756110756.1
+------------------------------------------------------------------------
+
+=== TRUNG BÌNH ===
+Ctrl             Giao đủ  Về dock  Võng TB(°)  Bước TB
+Pure-pursuit  47/     477/     7        6.77     7523
+RL v1         40/     476/     7       39.42    27558
+RL v2         36/     475/     7       34.14    49100
+
+saved compare_controllers.png

@@ -1,0 +1,26 @@
+pybullet build time: May 18 2026 16:35:53
+
+========== PPO ==========
+[ppo] trained 100000 steps in 3.2 min -> D:\tests\delivery_rl\runs\ppo\ppo_final.zip
+[ppo] eval: deliv=0.0% success=0.0% coll/ep=0.00 avg_reward=-64.5
+
+========== SAC ==========
+[sac] trained 100000 steps in 23.0 min -> D:\tests\delivery_rl\runs\sac\sac_final.zip
+[sac] eval: deliv=10.0% success=0.0% coll/ep=0.05 avg_reward=-36.0
+
+========== TD3 ==========
+[td3] trained 100000 steps in 25.9 min -> D:\tests\delivery_rl\runs\td3\td3_final.zip
+[td3] eval: deliv=0.0% success=0.0% coll/ep=0.20 avg_reward=-45.3
+
+# Training comparison (level L1, 100000 steps, 20 eval episodes)
+
+_total wall time: 52.6 min_
+
+| algo | delivery % | success % | coll/ep | avg steps | avg reward | train min |
+|------|-----------:|----------:|--------:|----------:|-----------:|----------:|
+| ppo | 0.0 | 0.0 | 0.00 | 600 | -64.5 | 3.2 |
+| sac | 10.0 | 0.0 | 0.05 | 583 | -36.0 | 23.0 |
+| td3 | 0.0 | 0.0 | 0.20 | 500 | -45.3 | 25.9 |
+
+ARTIFACTS: runs/<algo>/<algo>_final.zip, results/compare.json, results/curves.json, results/SUMMARY.md
+EXPERIMENTS_DONE

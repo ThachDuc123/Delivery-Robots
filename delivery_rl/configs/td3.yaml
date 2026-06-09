@@ -1,0 +1,21 @@
+# TD3 (off-policy, continuous) -- inherits everything from default.yaml
+defaults: default.yaml
+
+algo: td3
+
+td3:
+  policy: "MlpPolicy"
+  learning_rate: 0.0003
+  buffer_size: 300000
+  batch_size: 256
+  tau: 0.005
+  gamma: 0.99
+  train_freq: 1
+  gradient_steps: 1
+  learning_starts: 1000
+  policy_delay: 2
+  target_policy_noise: 0.2
+  target_noise_clip: 0.5
+  action_noise_std: 0.1   # Gaussian exploration noise (built in train.py)
+  policy_kwargs:
+    net_arch: [256, 256]

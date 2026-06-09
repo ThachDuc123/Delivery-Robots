@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(/d/tests/.venv/Scripts/python.exe -c \"import importlib; [print\\('OK',m\\) if importlib.util.find_spec\\(m\\) else print\\('MISSING',m\\) for m in ['pybullet','yaml','tensorboard']]\")"
+    ]
+  }
+}

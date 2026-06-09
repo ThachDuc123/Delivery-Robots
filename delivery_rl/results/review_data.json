@@ -1,0 +1,151 @@
+{
+  "scenarios": [
+    {
+      "name": "corridor NEAR -> #2",
+      "level": 1,
+      "override": {
+        "force_locker_id": 2
+      }
+    },
+    {
+      "name": "corridor MID -> #4",
+      "level": 1,
+      "override": {
+        "force_locker_id": 4
+      }
+    },
+    {
+      "name": "corridor FAR -> #5",
+      "level": 1,
+      "override": {
+        "force_locker_id": 5
+      }
+    },
+    {
+      "name": "FAR + obstacles -> #5",
+      "level": 1,
+      "override": {
+        "force_locker_id": 5,
+        "num_obstacles": 4,
+        "locker_sides": [
+          "north"
+        ]
+      }
+    }
+  ],
+  "map_summary": [
+    {
+      "scenario": "corridor NEAR -> #2",
+      "algo": "ppo",
+      "reached": true,
+      "steps": 45,
+      "path_len": 1.101680040359497
+    },
+    {
+      "scenario": "corridor NEAR -> #2",
+      "algo": "sac",
+      "reached": true,
+      "steps": 49,
+      "path_len": 1.1369576454162598
+    },
+    {
+      "scenario": "corridor NEAR -> #2",
+      "algo": "td3",
+      "reached": true,
+      "steps": 65,
+      "path_len": 1.5906970500946045
+    },
+    {
+      "scenario": "corridor MID -> #4",
+      "algo": "ppo",
+      "reached": true,
+      "steps": 180,
+      "path_len": 8.097478866577148
+    },
+    {
+      "scenario": "corridor MID -> #4",
+      "algo": "sac",
+      "reached": false,
+      "steps": 900,
+      "path_len": 3.5467803478240967
+    },
+    {
+      "scenario": "corridor MID -> #4",
+      "algo": "td3",
+      "reached": true,
+      "steps": 223,
+      "path_len": 9.348403930664062
+    },
+    {
+      "scenario": "corridor FAR -> #5",
+      "algo": "ppo",
+      "reached": true,
+      "steps": 313,
+      "path_len": 15.491767883300781
+    },
+    {
+      "scenario": "corridor FAR -> #5",
+      "algo": "sac",
+      "reached": false,
+      "steps": 195,
+      "path_len": 7.076860427856445
+    },
+    {
+      "scenario": "corridor FAR -> #5",
+      "algo": "td3",
+      "reached": false,
+      "steps": 900,
+      "path_len": 18.604276657104492
+    },
+    {
+      "scenario": "FAR + obstacles -> #5",
+      "algo": "ppo",
+      "reached": true,
+      "steps": 314,
+      "path_len": 15.497377395629883
+    },
+    {
+      "scenario": "FAR + obstacles -> #5",
+      "algo": "sac",
+      "reached": false,
+      "steps": 205,
+      "path_len": 7.074832916259766
+    },
+    {
+      "scenario": "FAR + obstacles -> #5",
+      "algo": "td3",
+      "reached": false,
+      "steps": 900,
+      "path_len": 19.45362091064453
+    }
+  ],
+  "benchmark": {
+    "ppo": {
+      "avg_reward": 128.9216603567199,
+      "avg_steps": 285.5,
+      "delivery_rate": 1.0,
+      "reach_rate": 1.0,
+      "collisions": 0.3333333333333333,
+      "avg_path_len": 14.203570269667047,
+      "reward_std": 27.651419901319432
+    },
+    "sac": {
+      "avg_reward": 56.751085223915574,
+      "avg_steps": 563.3333333333334,
+      "delivery_rate": 0.5,
+      "reach_rate": 0.5,
+      "collisions": 0.08333333333333333,
+      "avg_path_len": 8.083404521466017,
+      "reward_std": 70.48988386490797
+    },
+    "td3": {
+      "avg_reward": 78.7729732362641,
+      "avg_steps": 375.1666666666667,
+      "delivery_rate": 0.75,
+      "reach_rate": 0.75,
+      "collisions": 0.3333333333333333,
+      "avg_path_len": 11.079209009484005,
+      "reward_std": 62.30113921571359
+    }
+  }
+}

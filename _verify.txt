@@ -1,0 +1,5 @@
+pybullet build time: May 18 2026 16:35:53
+ALGO ppo OK 1.1s
+ALGO sac OK 3.1s
+ALGO td3 OK 1.8s
+VERDICT ALL_OK

@@ -1,0 +1,15 @@
+
+=== SET A — 1000-map distribution (100 lượt) ===
+Bộ lái            Tới đích  Va chạm  e_y(m)  Đánh võng°   Bước  Lệch PP
+Pure-Pursuit           99%       1%   0.016        1.13    155    0.000
+RL ms_guided           97%       0%   0.037        4.44    201    0.292
+
+=== SET B — map CŨ (apt a/b/c + 3 cong + apartment_complex) (50 lượt) ===
+Bộ lái            Tới đích  Va chạm  e_y(m)  Đánh võng°   Bước  Lệch PP
+Pure-Pursuit           96%       4%   0.017        1.02    183    0.000
+RL ms_guided           96%       4%   0.040        2.26    197    0.368
+
+=== TỈ LỆ RL so với Pure-Pursuit ===
+Set A: tới đích RL = 98% của PP | độ mượt RL = 25% của PP (RL 4.44° vs PP 1.13°)
+Set B: tới đích RL = 100% của PP | độ mượt RL = 45% của PP (RL 2.26° vs PP 1.02°)
+DONE

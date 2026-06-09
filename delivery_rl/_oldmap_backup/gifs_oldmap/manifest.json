@@ -1,0 +1,116 @@
+{
+  "ppo": [
+    {
+      "scenario": "clear",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\ppo_clear.gif",
+      "seed": 2024,
+      "steps": 138,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 253751
+    },
+    {
+      "scenario": "obstacles",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\ppo_obstacles.gif",
+      "seed": 2024,
+      "steps": 138,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 261038
+    },
+    {
+      "scenario": "pedestrians",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\ppo_pedestrians.gif",
+      "seed": 2024,
+      "steps": 334,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 474276
+    }
+  ],
+  "sac": [
+    {
+      "scenario": "clear",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\sac_clear.gif",
+      "seed": 2024,
+      "steps": 141,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 220991
+    },
+    {
+      "scenario": "obstacles",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\sac_obstacles.gif",
+      "seed": 2024,
+      "steps": 141,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 229249
+    },
+    {
+      "scenario": "pedestrians",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\sac_pedestrians.gif",
+      "seed": 2024,
+      "steps": 343,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 464493
+    }
+  ],
+  "td3": [
+    {
+      "scenario": "clear",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\td3_clear.gif",
+      "seed": 2024,
+      "steps": 139,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 232830
+    },
+    {
+      "scenario": "obstacles",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\td3_obstacles.gif",
+      "seed": 2024,
+      "steps": 139,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 240298
+    },
+    {
+      "scenario": "pedestrians",
+      "level": 0,
+      "gif": "delivery_rl\\results\\gifs\\td3_pedestrians.gif",
+      "seed": 7,
+      "steps": 332,
+      "frames": 90,
+      "deliv": 1,
+      "n": 1,
+      "reached": true,
+      "bytes": 400342
+    }
+  ]
+}

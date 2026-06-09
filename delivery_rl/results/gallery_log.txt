@@ -1,0 +1,11 @@
+pybullet build time: May 18 2026 16:35:53
+[ppo] clear        seed=2024 steps= 138 frames= 90 deliv=1/1 reached=True 247KB
+[ppo] obstacles    seed=2024 steps= 138 frames= 90 deliv=1/1 reached=True 254KB
+[ppo] pedestrians  seed=2024 steps= 334 frames= 90 deliv=1/1 reached=True 463KB
+[sac] clear        seed=2024 steps= 141 frames= 90 deliv=1/1 reached=True 215KB
+[sac] obstacles    seed=2024 steps= 141 frames= 90 deliv=1/1 reached=True 223KB
+[sac] pedestrians  seed=2024 steps= 343 frames= 90 deliv=1/1 reached=True 453KB
+[td3] clear        seed=2024 steps= 139 frames= 90 deliv=1/1 reached=True 227KB
+[td3] obstacles    seed=2024 steps= 139 frames= 90 deliv=1/1 reached=True 234KB
+[td3] pedestrians  seed=   7 steps= 332 frames= 90 deliv=1/1 reached=True 390KB
+GALLERY_DONE

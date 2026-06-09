@@ -1,0 +1,141 @@
+# ------------------------------------------------------------------------- #
+#  Default configuration for the apartment-corridor delivery-robot RL env.
+#  Algo configs (ppo/sac/td3.yaml) inherit this via `defaults: default.yaml`.
+#  SENSOR-ONLY phase: no camera / no vision anywhere in the observation.
+# ------------------------------------------------------------------------- #
+seed: 0
+
+env:
+  gui: false                # PyBullet GUI; notebook/training use DIRECT (headless)
+  sim_dt: 0.01              # physics timestep (s)
+  control_hz: 20            # agent control frequency (Hz)
+  max_episode_steps: 1200
+
+  control:
+    # Low-pass filter on the commanded [vx, vy, omega]. 0 = no smoothing (raw
+    # policy output), higher = smoother / less vibration. Applied at execution
+    # so it improves stability without retraining.
+    action_smoothing: 0.6
+
+  safety:
+    # Reactive pedestrian-avoidance shield layered on top of the RL policy.
+    enable_pedestrian_shield: true
+    concern_distance: 2.6     # start reacting to a resident within this range (m)
+    slow_distance: 1.8        # slow/follow band (m)
+    stop_distance: 0.9        # yield/stop band (m)
+    disable_near_target: 1.2  # within this of the target, let docking finish
+    path_halfwidth: 0.5       # lateral band counted as "in the way" (m)
+    side_clearance: 0.15      # extra gap needed to slip past on a side (m)
+    wall_margin: 0.18         # keep this clear of the wall when sidestepping (m)
+    follow_speed_scale: 0.35  # forward speed while following (no room to pass)
+    creep_speed: 0.28         # forward speed while sidestepping a head-on person
+    overtake_speed: 0.95      # forward speed while passing a same-direction person
+    sidestep_speed: 0.7       # max lateral speed when slipping into a gap
+    sidestep_gain: 2.5        # P-gain steering toward the lateral target
+    commit_steps: 25          # hold the chosen pass-side this many steps (anti-oscillation)
+    # When the shield is actively yielding, a resident bumping the stopped robot
+    # is the resident's doing -> do not end the episode, just beep.
+    pedestrian_nonterminal_when_yielding: true
+
+  world:
+    # "rich"  -> wide main corridor + side rooms (ngõ ngách) + a curved arc
+    #            branch (hành lang vòng cung); lockers spread across all areas.
+    # "straight" -> original narrow single corridor (kept for comparison).
+    map_style: "rich"
+    corridor_length: 36.0   # main backbone length (m), along x
+    corridor_width: 3.0     # WIDE main corridor (m), along y
+    wall_height: 2.2
+    wall_thickness: 0.12
+    room_depth: 2.8         # how deep the side rooms go off the corridor (m)
+    room_width: 2.2         # mouth width of each side room (m)
+    arc_inner_radius: 3.0   # inner radius of the curved branch (m)
+    arc_width: 2.2          # drivable width of the curved branch (m)
+    # legacy keys (used only by map_style "straight")
+    num_alcoves: 6
+    alcove_width: 1.6
+    alcove_depth: 1.5
+    num_lockers: 24
+    locker_size: [0.45, 0.30, 0.55]   # [along-wall, depth, height]
+    locker_base_height: 0.05
+    # Loaded if the file exists (export from Blender later); else procedural.
+    scene_map: "assets/scene_map.json"
+    # Global waypoint planner (BFS on a grid) guides the reactive RL policy
+    # around corners/rooms/the arc. Disable to fall back to straight-line target.
+    use_planner: true
+    waypoint_reach_dist: 0.45   # advance to next waypoint within this distance (m)
+
+  robot:
+    # Used if the URDF exists; otherwise a PyBullet primitive robot is built.
+    urdf: "assets/robot/delivery_robot.urdf"
+    base_size: [0.50, 0.50, 0.25]
+    base_mass: 18.0
+    wheel_radius: 0.05
+    half_wheel_base: 0.20   # lx (m)
+    half_track_width: 0.20  # ly (m)
+    spawn_height: 0.18
+    max_linear_speed: 0.8   # m/s for vx and vy
+    max_yaw_rate: 1.5       # rad/s for omega
+
+  mechanism:
+    arm_lift_range: [0.0, 0.50]
+    tray_extend_range: [0.0, 0.35]
+    probe_auth_range: [0.0, 0.08]
+    carousel_slots: 6
+    macro_steps: 24         # control steps for lift->extend->auth->release->retract
+    dock_zone_radius: 0.65  # robot must be within this of the locker dock point
+    # yaw tolerance to face the locker. >= pi disables the alignment requirement
+    # (default: docking by zone only). Tighten to require "canh khay" alignment.
+    dock_align_yaw: 3.2
+
+  sensors:
+    lidar:
+      num_rays: 36          # 360 deg 2D LiDAR
+      max_range: 6.0
+      height: 0.20
+      noise_std: 0.01
+    tof:
+      max_range: 2.0        # front/back/left/right ToF
+      noise_std: 0.005
+    imu:
+      accel_noise_std: 0.05
+      gyro_noise_std: 0.01
+      yaw_noise_std: 0.005
+    odometry:
+      xy_noise_std: 0.01
+      yaw_noise_std: 0.005
+      vel_noise_std: 0.01
+
+  task:
+    num_parcels: 1
+    battery_capacity: 1.0
+    battery_drain_per_m: 0.003
+    battery_drain_idle: 0.00005
+
+  curriculum:
+    # L0 nearest empty locker | L1 random locker | L2 multi-parcel routing
+    # L3 static obstacles | L4 moving residents (stub) | L5 domain randomization
+    level: 0
+
+  reward:
+    progress: 1.0               # per metre closer to current target
+    delivery_success: 60.0      # correct parcel into correct locker
+    all_done_bonus: 40.0        # all parcels delivered
+    return_dock_bonus: 40.0     # returned to dock after delivering
+    wrong_delivery_penalty: -15.0
+    collision_penalty: -25.0
+    pedestrian_collision_penalty: -60.0
+    time_penalty: -0.01
+    energy_penalty: -0.002      # per metre travelled
+    vibration_penalty: -0.02    # per rad/s of angular-rate change
+    tilt_penalty: -25.0
+
+  termination:
+    on_collision: true
+    tilt_threshold_deg: 35.0
+
+train:
+  total_timesteps: 200000
+  eval_episodes: 5
+  checkpoint_freq: 25000
+  tensorboard_dir: "runs"
+  save_dir: "runs"

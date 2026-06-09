@@ -1,0 +1,24 @@
+pybullet build time: May 18 2026 16:35:53
+
+========== PPO (L1 warm-start) ==========
+[ppo] warm-starting from D:\tests\delivery_rl\_L0newmap_backup\ppo_final.zip
+[ppo] L1 eval: deliv=15% success=10% coll/ep=0.00 reward=17 (3 min)
+
+========== SAC (L1 warm-start) ==========
+[sac] warm-starting from D:\tests\delivery_rl\_L0newmap_backup\sac_final.zip
+[sac] L1 eval: deliv=10% success=10% coll/ep=0.10 reward=6 (46 min)
+
+========== TD3 (L1 warm-start) ==========
+[td3] warm-starting from D:\tests\delivery_rl\_L0newmap_backup\td3_final.zip
+[td3] L1 eval: deliv=0% success=0% coll/ep=0.30 reward=-15 (23 min)
+
+# Training comparison (level L1 warm-start, 150000 steps, 20 eval episodes)
+
+_total wall time: 71.2 min_
+
+| algo | delivery % | success % | coll/ep | path(m) | avg reward | train min |
+|------|-----------:|----------:|--------:|--------:|-----------:|----------:|
+| ppo | 15 | 10 | 0.00 | 12.8 | 17 | 3 |
+| sac | 10 | 10 | 0.10 | 8.8 | 6 | 46 |
+| td3 | 0 | 0 | 0.30 | 9.3 | -15 | 22 |
+L1_TRAINING_DONE

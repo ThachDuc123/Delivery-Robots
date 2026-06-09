@@ -1,0 +1,53 @@
+Map             Ctrl                    Giao    Võng°   Bước
+--------------------------------------------------------------
+apartment_a     Pure-pursuit        10/   10     2.52   1669
+apartment_a     RL v1               9/   10    39.61  19558
+apartment_a     RL v2               8/   10    31.81  77632
+apartment_a     RL guided smooth    10/   10     4.62   1856
+apartment_a     RL guided smooth2   9/   10    13.53  16785
+--------------------------------------------------------------
+apartment_b     Pure-pursuit        12/   12     2.96   1377
+apartment_b     RL v1               12/   12    46.60  32005
+apartment_b     RL v2               10/   12    46.81  76781
+apartment_b     RL guided smooth    12/   12     5.52   1552
+apartment_b     RL guided smooth2   12/   12     5.36   1540
+--------------------------------------------------------------
+apartment_c     Pure-pursuit        8/    8     2.76   1338
+apartment_c     RL v1               7/    8    41.49  31767
+apartment_c     RL v2               8/    8    33.76  47933
+apartment_c     RL guided smooth    8/    8     5.27   1483
+apartment_c     RL guided smooth2   8/    8     5.08   1444
+--------------------------------------------------------------
+test_c_curve    Pure-pursuit        3/    3    12.23  15544
+test_c_curve    RL v1               1/    3    30.14  30410
+test_c_curve    RL v2               3/    3    23.96   1053
+test_c_curve    RL guided smooth    3/    3    15.08  15628
+test_c_curve    RL guided smooth2   3/    3    16.12  15561
+--------------------------------------------------------------
+test_s_curve    Pure-pursuit        3/    3    11.98  15708
+test_s_curve    RL v1               3/    3    46.24  15798
+test_s_curve    RL v2               3/    3    26.80  16059
+test_s_curve    RL guided smooth    3/    3    15.07  15921
+test_s_curve    RL guided smooth2   3/    3     5.08    941
+--------------------------------------------------------------
+test_u_turn     Pure-pursuit        3/    3    11.95  15675
+test_u_turn     RL v1               3/    3    36.53  16373
+test_u_turn     RL v2               2/    3    34.09  16682
+test_u_turn     RL guided smooth    2/    3    14.48  15676
+test_u_turn     RL guided smooth2   3/    3    15.74  15663
+--------------------------------------------------------------
+apartment_complexPure-pursuit        8/    8     2.98   1350
+apartment_complexRL v1               5/    8    35.34  46997
+apartment_complexRL v2               2/    8    41.73 107561
+apartment_complexRL guided smooth    8/    8     4.57   1680
+apartment_complexRL guided smooth2   8/    8     5.30   1514
+--------------------------------------------------------------
+
+=== TRUNG BÌNH (7 map) ===
+Ctrl                   Giao đủ  Võng TB°  Bước TB
+Pure-pursuit        47/     47      6.77     7523
+RL v1               40/     47     39.42    27558
+RL v2               36/     47     34.14    49100
+RL guided smooth    46/     47      9.23     7685
+RL guided smooth2   46/     47      9.46     7635
+(xong trong 1026s)

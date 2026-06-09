@@ -1,0 +1,55 @@
+{
+  "results": {
+    "ppo": {
+      "avg_reward": 129.90933368254986,
+      "avg_steps": 308.3333333333333,
+      "delivery_rate": 1.0,
+      "reach_rate": 1.0,
+      "collisions": 0.3333333333333333,
+      "avg_path_len": 15.483281502793643,
+      "per_locker_reach": {
+        "0": 1.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "train_minutes": 4.4
+    },
+    "sac": {
+      "avg_reward": 54.79505054052752,
+      "avg_steps": 452.6666666666667,
+      "delivery_rate": 0.5,
+      "reach_rate": 0.5,
+      "collisions": 0.25,
+      "avg_path_len": 8.284715317160458,
+      "per_locker_reach": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 0.0,
+        "5": 0.0
+      },
+      "train_minutes": 39.1
+    },
+    "td3": {
+      "avg_reward": 69.43466114464614,
+      "avg_steps": 375.6666666666667,
+      "delivery_rate": 0.6666666666666666,
+      "reach_rate": 0.6666666666666666,
+      "collisions": 0.3333333333333333,
+      "avg_path_len": 10.4089236906893,
+      "per_locker_reach": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 0.0
+      },
+      "train_minutes": 24.9
+    }
+  }
+}

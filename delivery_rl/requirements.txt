@@ -1,0 +1,9 @@
+# Python 3.10+ . Install with:  pip install -r requirements.txt
+gymnasium>=0.29
+stable-baselines3>=2.2
+pybullet>=3.2.5
+pyyaml>=6.0
+tensorboard>=2.12
+numpy>=1.24
+matplotlib>=3.6
+torch>=2.0          # pulled in by stable-baselines3

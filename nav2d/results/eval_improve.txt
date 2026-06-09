@@ -1,0 +1,15 @@
+
+=== SET A — 1000-map (70 lượt) ===
+Bộ lái                 Tới đích Va chạm  e_y(m)  Đánh võng°   Bước
+Pure-Pursuit                99%      1%   0.016        1.14    158
+ms_guided_smooth            99%      1%   0.035        1.64    171
+ms_guided_caps              99%      1%   0.037        1.71    167
+ms_guided_lipsnet           13%      0%   0.039       86.71   1324
+
+=== SET B — map cũ (50 lượt) ===
+Bộ lái                 Tới đích Va chạm  e_y(m)  Đánh võng°   Bước
+Pure-Pursuit                96%      4%   0.017        1.02    183
+ms_guided_smooth            96%      4%   0.036        1.95    198
+ms_guided_caps              94%      4%   0.037        2.02    225
+ms_guided_lipsnet           30%      4%   0.038       57.31   1077
+DONE
